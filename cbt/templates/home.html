@@ -1,0 +1,536 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+	{% include 'header.html' %}
+  <!-- Header Template Goess Here -->
+
+  <!-- SideBar Template goes Here -->
+
+  {% include 'sidebar.html' %}
+  
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->	  
+	<div class="content-header">
+		<div class="d-flex align-items-center">
+			<div class="mr-auto">
+				<h3 class="page-title">Dashboard</h3>
+				<div class="d-inline-block align-items-center">
+					<nav>
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+							<li class="breadcrumb-item active" aria-current="page">Control</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+			<div class="right-title w-170">
+				<span class="subheader_daterange font-weight-600" id="dashboard_daterangepicker">
+					<span class="subheader_daterange-label">
+						<span class="subheader_daterange-title"></span>
+						<span class="subheader_daterange-date text-primary"></span>
+					</span>
+					<a href="#" class="btn btn-sm btn-primary">
+						<i class="fa fa-angle-down"></i>
+					</a>
+				</span>
+			</div>
+		</div>
+	</div>
+
+    <!-- Main content -->
+    <section class="content">
+
+
+				<div class="row">
+						<div class="col-xl-3 col-md-6 col-12">
+								<div class="box box-body">
+									<h6 class="mb-0">
+										<span class="text-uppercase">ORDER RECEIVED</span>
+										<span class="float-right"><a class="btn btn-xs btn-primary" href="#">View</a></span>
+									</h6>
+									<br>
+						<small>Todays Order</small>
+									<p class="font-size-26">51,642</p>
+		
+									<div class="progress progress-xxs mt-0 mb-10">
+										<div class="progress-bar bg-success" role="progressbar" style="width: 35%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<div class="font-size-12"><i class="ion-arrow-graph-up-right text-success mr-1"></i> %18 decrease from last month</div>
+								</div>
+						</div>
+						<!-- /.col -->
+						<div class="col-xl-3 col-md-6 col-12">
+								<div class="box box-body">
+									<h6 class="mb-0">
+										<span class="text-uppercase">TAX DEDUCATION</span>
+										<span class="float-right"><a class="btn btn-xs btn-primary" href="#">View</a></span>
+									</h6>
+									<br>
+						<small>Monthly Deduction</small>
+									<p class="font-size-26">$5,354</p>
+		
+									<div class="progress progress-xxs mt-0 mb-10">
+										<div class="progress-bar bg-danger" role="progressbar" style="width: 75%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<div class="font-size-12"><i class="ion-arrow-graph-up-right text-success mr-1"></i> 324 more than last year</div>
+								</div>
+						</div>
+						<!-- /.col -->
+		
+						<div class="col-xl-3 col-md-6 col-12">
+								<div class="box box-body">
+									<h6 class="mb-0">
+										<span class="text-uppercase">REVENUE STATUS</span>
+										<span class="float-right"><a class="btn btn-xs btn-primary" href="#">View</a></span>
+									</h6>
+									<br>
+						<small>Weekly Revenue</small>
+									<p class="font-size-26">$1,642</p>
+		
+									<div class="progress progress-xxs mt-0 mb-10">
+										<div class="progress-bar bg-info" role="progressbar" style="width: 55%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<div class="font-size-12"><i class="ion-arrow-graph-down-right text-danger mr-1"></i> %41 down last year</div>
+								</div>
+						</div>
+						<!-- /.col -->
+						<div class="col-xl-3 col-md-6 col-12">
+								<div class="box box-body">
+									<h6 class="mb-0">
+										<span class="text-uppercase">YEARLY SALES</span>
+										<span class="float-right"><a class="btn btn-xs btn-primary" href="#">View</a></span>
+									</h6>
+									<br>
+						<small>Yearly Income</small>
+									<p class="font-size-26">$81,642k</p>
+		
+									<div class="progress progress-xxs mt-0 mb-10">
+										<div class="progress-bar bg-primary" role="progressbar" style="width: 52%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<div class="flexbox font-size-12">
+										<span><i class="ion-arrow-graph-down-right text-success mr-1"></i> %37 up last year</span>
+									</div>
+								</div>
+						</div>
+						<!-- /.col -->
+					
+				 </div>
+		
+
+		
+					<div class="row">
+
+
+							<div class="col-lg-5 col-12 connectedSortable">
+									<div class="box">
+													<div class="box-header with-border">
+														<h4 class="box-title">On Going Market</h4>
+														<div class="box-controls pull-right">
+															<div class="btn-group">
+												<button type="button" class="btn btn-xs btn-default">Sort by Newest</button>
+												<button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+												<span class="caret"></span>
+												<span class="sr-only">Toggle Dropdown</span>
+												</button>
+												<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">Sort by Newest</a>
+												<a class="dropdown-item" href="#">Sort by Highest Rating</a>
+												<a class="dropdown-item" href="#">Sort by Highest Rating</a>
+												</div>
+											</div>
+														</div>
+													</div>
+						
+													<div class="box-body">
+											<div class="media-list media-list-divided">
+										{% for markets in market %}	
+											<div class="media p-0">
+												<div class="media-body m-0">
+												<div class="flexbox">							
+													<div>
+														<h4 class="mb-0">For T-shirt</h4>
+													</div>
+													<div>
+														<a href="javascript:void(0);" class="fa fa-star"></a>
+														<a href="javascript:void(0);" class="fa fa-star"></a>
+														<a href="javascript:void(0);" class="fa fa-star"></a>
+														<a href="javascript:void(0);" class="fa fa-star"></a>
+														<a href="javascript:void(0);" class="fa fa-star-half"></a>
+													</div> 
+												</div>  
+												<p>By<strong><a href="javascript:void(0)" class="inline-block capitalize-font  mb-5">Johen Doe</a></strong> <span class="float-right">11 day ago</span></p>
+												<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+												<div class="media-block-actions my-5">
+													<nav class="nav nav-dot-separated no-gutters">
+													<div class="nav-item">
+														<a class="nav-link text-success" href="#"><i class="fa fa-thumbs-up"></i> (17)</a>
+													</div>
+													<div class="nav-item">
+														<a class="nav-link text-danger" href="#"><i class="fa fa-thumbs-down"></i> (22)</a>
+													</div>
+													</nav>
+						
+													<nav class="nav no-gutters gap-2 font-size-16 media-hover-show">
+													<a class="nav-link text-success" href="#" data-toggle="tooltip" title="" data-original-title="Approve"><i class="ion-checkmark"></i></a>
+													<a class="nav-link text-danger" href="#" data-toggle="tooltip" title="" data-original-title="Delete"><i class="ion-close"></i></a>
+													</nav>
+												</div>
+												</div>
+											</div>
+										{% endfor %}
+										
+										
+											</div>
+										</div>
+								</div>
+									
+							
+							</div>
+									
+						
+											<div class="col-lg-5 col-12 connectedSortable">
+													<div class="box">
+																	<div class="box-header with-border">
+																		<h4 class="box-title">Tomorrow Market</h4>
+																		<div class="box-controls pull-right">
+																			<div class="btn-group">
+																<button type="button" class="btn btn-xs btn-default">Sort by Newest</button>
+																<button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+																<span class="caret"></span>
+																<span class="sr-only">Toggle Dropdown</span>
+																</button>
+																<div class="dropdown-menu dropdown-menu-right">
+																<a class="dropdown-item" href="#">Sort by Newest</a>
+																<a class="dropdown-item" href="#">Sort by Highest Rating</a>
+																<a class="dropdown-item" href="#">Sort by Highest Rating</a>
+																</div>
+															</div>
+																		</div>
+																	</div>
+										
+																	<div class="box-body">
+															<div class="media-list media-list-divided">
+															<div class="media p-0">
+																<div class="media-body m-0">
+																<div class="flexbox">							
+																	<div>
+																		<h4 class="mb-0">For T-shirt</h4>
+																	</div>
+																	<div>
+																		<a href="javascript:void(0);" class="fa fa-star"></a>
+																		<a href="javascript:void(0);" class="fa fa-star"></a>
+																		<a href="javascript:void(0);" class="fa fa-star"></a>
+																		<a href="javascript:void(0);" class="fa fa-star"></a>
+																		<a href="javascript:void(0);" class="fa fa-star-half"></a>
+																	</div> 
+																</div>  
+																<p>By<strong><a href="javascript:void(0)" class="inline-block capitalize-font  mb-5">Johen Doe</a></strong> <span class="float-right">11 day ago</span></p>
+																<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+																<div class="media-block-actions my-5">
+																	<nav class="nav nav-dot-separated no-gutters">
+																	<div class="nav-item">
+																		<a class="nav-link text-success" href="#"><i class="fa fa-thumbs-up"></i> (17)</a>
+																	</div>
+																	<div class="nav-item">
+																		<a class="nav-link text-danger" href="#"><i class="fa fa-thumbs-down"></i> (22)</a>
+																	</div>
+																	</nav>
+										
+																	<nav class="nav no-gutters gap-2 font-size-16 media-hover-show">
+																	<a class="nav-link text-success" href="#" data-toggle="tooltip" title="" data-original-title="Approve"><i class="ion-checkmark"></i></a>
+																	<a class="nav-link text-danger" href="#" data-toggle="tooltip" title="" data-original-title="Delete"><i class="ion-close"></i></a>
+																	</nav>
+																</div>
+																</div>
+															</div>
+															<div class="media p-0">
+																<div class="media-body m-0">
+																<div class="flexbox mt-10">							
+																	<div>
+																		<h4 class="mb-0">For Shirt</h4>
+																	</div>
+																	<div>
+																		<a href="javascript:void(0);" class="fa fa-star"></a>
+																		<a href="javascript:void(0);" class="fa fa-star"></a>
+																		<a href="javascript:void(0);" class="fa fa-star"></a>
+																		<a href="javascript:void(0);" class="fa fa-star"></a>
+																		<a href="javascript:void(0);" class="fa fa-star-half"></a>
+																	</div> 
+																</div>  
+																<p>By<strong><a href="javascript:void(0)" class="inline-block capitalize-font  mb-5">Johen Doe</a></strong> <span class="float-right">11 day ago</span></p>
+																<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+																<div class="media-block-actions my-5">
+																	<nav class="nav nav-dot-separated no-gutters">
+																	<div class="nav-item">
+																		<a class="nav-link text-success" href="#"><i class="fa fa-thumbs-up"></i> (17)</a>
+																	</div>
+																	<div class="nav-item">
+																		<a class="nav-link text-danger" href="#"><i class="fa fa-thumbs-down"></i> (22)</a>
+																	</div>
+																	</nav>
+										
+																	<nav class="nav no-gutters gap-2 font-size-16 media-hover-show">
+																	<a class="nav-link text-success" href="#" data-toggle="tooltip" title="" data-original-title="Approve"><i class="ion-checkmark"></i></a>
+																	<a class="nav-link text-danger" href="#" data-toggle="tooltip" title="" data-original-title="Delete"><i class="ion-close"></i></a>
+																	</nav>
+																</div>
+																</div>
+															</div>
+															<div class="media p-0">
+																<div class="media-body m-0">
+																<div class="flexbox mt-10">							
+																	<div>
+																		<h4 class="mb-0">For Dress</h4>
+																	</div>
+																	<div>
+																		<a href="javascript:void(0);" class="fa fa-star"></a>
+																		<a href="javascript:void(0);" class="fa fa-star"></a>
+																		<a href="javascript:void(0);" class="fa fa-star"></a>
+																		<a href="javascript:void(0);" class="fa fa-star"></a>
+																		<a href="javascript:void(0);" class="fa fa-star-half"></a>
+																	</div> 
+																</div>  
+																<p>By<strong><a href="javascript:void(0)" class="inline-block capitalize-font  mb-5">Johen Doe</a></strong> <span class="float-right">11 day ago</span></p>
+																<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+																<div class="media-block-actions my-5">
+																	<nav class="nav nav-dot-separated no-gutters">
+																	<div class="nav-item">
+																		<a class="nav-link text-success" href="#"><i class="fa fa-thumbs-up"></i> (17)</a>
+																	</div>
+																	<div class="nav-item">
+																		<a class="nav-link text-danger" href="#"><i class="fa fa-thumbs-down"></i> (22)</a>
+																	</div>
+																	</nav>
+										
+																	<nav class="nav no-gutters gap-2 font-size-16 media-hover-show">
+																	<a class="nav-link text-success" href="#" data-toggle="tooltip" title="" data-original-title="Approve"><i class="ion-checkmark"></i></a>
+																	<a class="nav-link text-danger" href="#" data-toggle="tooltip" title="" data-original-title="Delete"><i class="ion-close"></i></a>
+																	</nav>
+																</div>
+																</div>
+															</div>
+															</div>
+																	</div>
+																</div>
+													
+											
+											</div>
+																				
+									  
+									<!-- /.row -->
+
+										  
+		<div class="col-12 col-lg-2">
+			  <div class="box">
+				  <div class="box-body">
+					<div class="flexbox">
+					  <h5>Overdue</h5>
+					  <div class="dropdown">
+						<span class="dropdown-toggle no-caret" data-toggle="dropdown"><i class="ion-android-more-vertical rotate-90"></i></span>
+						<div class="dropdown-menu dropdown-menu-right">
+						  <a class="dropdown-item" href="#"><i class="ion-android-list"></i> Details</a>
+						  <a class="dropdown-item" href="#"><i class="ion-android-add"></i> Add new</a>
+						  <a class="dropdown-item" href="#"><i class="ion-android-refresh"></i> Refresh</a>
+						</div>
+					  </div>
+					</div>
+
+					<div class="text-center my-2">
+					  <div class="font-size-60">185</div>
+					  <span>Tasks</span>
+					</div>
+				  </div>
+
+				  <div class="box-body bg-gray-light py-20">
+					<span class="text-muted mr-1">Overdue:</span>
+					<span class="text-dark">45</span>
+				  </div>
+
+				  <div class="progress progress-sm mt-0 mb-0">
+					<div class="progress-bar bg-info-gradient-animet" role="progressbar" style="width: 72%;" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+				  </div>
+				</div>
+			<div class="box bg-primary">
+
+              <div class="progress progress-sm mt-0 mb-0">
+                <div class="progress-bar bg-primary-gradient-animet" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <div class="card-body bg-gray-light py-20">
+                <span class="text-muted mr-1">Completed:</span>
+                <span class="text-dark">125</span>
+              </div>
+				
+              <div class="box-body">
+                <div class="flexbox pull-right">
+                  <div class="dropdown">
+                    <span class="dropdown-toggle no-caret" data-toggle="dropdown"><i class="ion-android-more-vertical"></i></span>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#"><i class="ion-android-list"></i> Details</a>
+                      <a class="dropdown-item" href="#"><i class="ion-android-add"></i> Add new</a>
+                      <a class="dropdown-item" href="#"><i class="ion-android-refresh"></i> Refresh</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center pb-5 mb-1">
+                  <h5 class="m-0">Tasks</h5>
+                  <div class="font-size-60 text-white">425</div>
+                  <span class="text-white">Due Tasks</span>
+                </div>
+              </div>
+            </div>
+		  </div>
+			
+					</div>
+
+
+
+
+			
+
+		
+  <div class="row">
+		  
+
+		  
+   
+
+		  
+		<div class="col-lg-12 col-12">
+          <div class="box">
+			    <div class="box-header with-border">
+				  <h4 class="box-title">Latest Market Update </h4>
+				</div>
+            <div class="box-body">
+              <div class="table-responsive">
+				<table id="invoice-list" class="table table-hover no-wrap" data-page-size="10">
+					<thead>
+						<tr>
+							<th>#SN</th>
+							<th>Market</th>
+							<th>Goods</th>
+							<th>Present Price</th>
+							<th>Last Price</th>
+							<th>View</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>#5010</td>
+							<td>Lorem Ipsum</td>
+							<td>$548</td>
+							<td><span class="label label-danger">Unpaid</span> </td>
+							<td>15-Jan</td>
+							<td>
+								<a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>#5011</td>
+							<td>Lorem Ipsum</td>
+							<td>$548</td>
+							<td><span class="label label-success">Paid</span> </td>
+							<td>15-Sep</td>
+							<td>
+								<a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>#5012</td>
+							<td>Lorem Ipsum</td>
+							<td>$9658</td>
+							<td><span class="label label-danger">Unpaid</span> </td>
+							<td>15-Jun</td>
+							<td>
+								<a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>#5013</td>
+							<td>Lorem Ipsum</td>
+							<td>$4587</td>
+							<td><span class="label label-success">Paid</span> </td>
+							<td>15-May</td>
+							<td>
+								<a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>#5014</td>
+							<td>Lorem Ipsum</td>
+							<td>$856</td>
+							<td><span class="label label-danger">Unpaid</span> </td>
+							<td>15-Mar</td>
+							<td>
+								<a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>#5015</td>
+							<td>Lorem Ipsum</td>
+							<td>$956</td>
+							<td><span class="label label-danger">Unpaid</span> </td>
+							<td>15-Aug</td>
+							<td>
+								<a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>#5016</td>
+							<td>Lorem Ipsum</td>
+							<td>$745</td>
+							<td><span class="label label-success">Paid</span> </td>
+							<td>15-Aug</td>
+							<td>
+								<a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>#5013</td>
+							<td>Lorem Ipsum</td>
+							<td>$4587</td>
+							<td><span class="label label-success">Paid</span> </td>
+							<td>15-May</td>
+							<td>
+								<a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>#5014</td>
+							<td>Lorem Ipsum</td>
+							<td>$856</td>
+							<td><span class="label label-danger">Unpaid</span> </td>
+							<td>15-Mar</td>
+							<td>
+								<a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /. box -->
+        </div>
+		  				  
+      </div>      
+      <!-- /.row -->	      
+	</section>
+    <!-- /.content -->
+  </div>
+
+  {% endblock %}

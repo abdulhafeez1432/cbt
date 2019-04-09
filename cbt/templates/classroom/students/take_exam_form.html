@@ -1,0 +1,48 @@
+<h2 class="mb-3">{{ course.name }}</h2>
+
+
+Course id <h2 class="mb-3">{{ course.id }}</h2>
+
+
+Student id <h2 class="mb-3">{{ request.user.id }}</h2>
+
+
+Total Question:  <h2 class="mb-3">{{ total_questions }}</h2>
+
+Mark Obtainable <h2 class="mb-3">{{ marks_obtainable.maximum_marks }}</h2>
+ 
+
+  
+<form method="post" novalidate>
+
+        {% csrf_token %}
+
+        {% for questions in question %}
+        
+        <input type="hidden" name="question_pk" value="{{ questions.pk }}">
+        
+        <h3 class="text-info">{{ questions.text|safe }}</h3>
+        
+       
+    {% for choices in questions.answers.all %}
+
+        
+        
+
+
+        <input class="form-check-input" type="radio" name="choice_pk{{ questions.pk }}" id="choices-{{ forloop.counter }}" value="{{ choices.pk }}">
+        
+        <label class="form-check-label" for="choices-{{ forloop.counter }}">
+              {{ choices.text|safe }}
+        </label>
+
+
+      {% endfor %}
+                    
+
+      {% endfor %}
+            <button type="submit" class="btn btn-primary">Submit Now →</button>
+
+
+</form>
+

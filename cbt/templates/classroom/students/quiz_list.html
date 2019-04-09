@@ -1,0 +1,31 @@
+
+
+  <div class="card">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>Quiz</th>
+          <th>Subject</th>
+          <th>Length</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for courses in course %}
+          <tr>
+            <td class="align-middle">{{ courses.name }}</td>
+            <td class="align-middle">{{ courses.questions_count }} questions</td>
+            <td class="text-right">
+              <a href="{% url 'students:take_quiz' courses.pk %}" class="btn btn-primary">Start quiz</a>
+              <a href="{% url 'students:take_exam' courses.pk %}" class="btn btn-primary mb-3" role="button">Start Exams</a> |
+
+            </td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td class="bg-light text-center font-italic" colspan="4">No quiz matching your interests right now.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>

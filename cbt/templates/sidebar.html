@@ -1,0 +1,163 @@
+  {% load static %}
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar-->
+    <section class="sidebar">
+      
+      <!-- sidebar menu-->
+      
+      <ul class="sidebar-menu" data-widget="tree">
+      {% if user.is_authenticated %}
+      <li class="user-profile treeview">
+          <a href="/">
+			<img src="{% static 'assets/images/avatar/7.jpg' %}" alt="user">
+              <span>
+				<span class="d-block font-weight-600 font-size-16">{{ user.username }}</span>
+				<span class="email-id">{{ user.email }}</span>
+			  </span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+		  <ul class="treeview-menu">
+            <li><a href="javascript:void()"><i class="fa fa-user mr-5"></i>My Profile </a></li>
+			<li><a href="javascript:void()"><i class="fa fa-money mr-5"></i>My Balance</a></li>
+			<li><a href="javascript:void()"><i class="fa fa-envelope-open mr-5"></i>Inbox</a></li>
+			<li><a href="javascript:void()"><i class="fa fa-cog mr-5"></i>Account Setting</a></li>
+			<li><a href="javascript:void()" href="{% url 'logout' %}"><i class="fa fa-power-off mr-5"></i>Logout</a></li>
+          </ul>
+        </li>
+      {% else %}
+
+      <li class="user-profile treeview">
+          <a href="/">
+			<img src="{% static 'assets/images/avatar/7.jpg' %}" alt="user">
+              <span>
+        <span class="d-block font-weight-600 font-size-16">Welcome Guest</span>
+        
+				
+			  </span>
+            
+		 
+        </li>
+
+
+      {% endif %}
+        
+		
+		<li class="treeview">
+          <a href="#">
+            <i class="mdi mdi-view-dashboard"></i>
+            <span>Dashboard</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="/"><i class="mdi mdi-toggle-switch-off"></i>Main Dashboard</a></li>
+            <li><a href="index-2.html"><i class="mdi mdi-toggle-switch-off"></i>e-Commerce Dashboard</a></li>
+            <li><a href="index-3.html"><i class="mdi mdi-toggle-switch-off"></i>Cryptocurrency</a></li>
+            <li><a href="index-4.html"><i class="mdi mdi-toggle-switch-off"></i>Analytics</a></li>
+            <li><a href="index-5.html"><i class="mdi mdi-toggle-switch-off"></i>Hospital</a></li>
+            <li><a href="index-6.html"><i class="mdi mdi-toggle-switch-off"></i>Support System</a></li>
+            <li><a href="index-7.html"><i class="mdi mdi-toggle-switch-off"></i>Sales Report</a></li>
+            <li><a href="index-8.html"><i class="mdi mdi-toggle-switch-off"></i>Music</a></li>
+          </ul>
+        </li>  
+		
+        <li class="treeview">
+          <a href="#">
+            <i class="mdi mdi-content-copy"></i>
+            <span>Layout Options</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/layout_boxed.html"><i class="mdi mdi-toggle-switch-off"></i>Boxed</a></li>
+            <li><a href="pages/layout_fixed.html"><i class="mdi mdi-toggle-switch-off"></i>Fixed</a></li>
+            <li><a href="pages/layout_collapsed_sidebar.html"><i class="mdi mdi-toggle-switch-off"></i>Mini Sidebar</a></li>
+          </ul>
+        </li>  
+		
+        <li class="treeview">
+          <a href="#">
+            <i class="mdi mdi-tune-vertical"></i>
+            <span>Page Layouts </span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/page_layout_inner_left_sidebar.html"><i class="mdi mdi-toggle-switch-off"></i>Inner Left Sidebar </a></li>
+            <li><a href="pages/page_layout_inner_right_sidebar.html"><i class="mdi mdi-toggle-switch-off"></i>Inner Right Sidebar </a></li>
+            <li><a href="pages/page_layout_inner_fixed_left_sidebar.html"><i class="mdi mdi-toggle-switch-off"></i>Inner Fixed Left Sidebar </a></li>
+            <li><a href="pages/page_layout_inner_fixed_right_sidebar.html"><i class="mdi mdi-toggle-switch-off"></i>Inner Fixed Right Sidebar </a></li>
+          </ul>
+        </li>
+		  
+		
+		  
+        <li class="treeview">
+          <a href="#">
+            <i class="mdi mdi-mailbox"></i> <span>Mailbox</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/mailbox_inbox.html"><i class="mdi mdi-toggle-switch-off"></i>Inbox</a></li>
+            <li><a href="pages/mailbox_compose.html"><i class="mdi mdi-toggle-switch-off"></i>Compose</a></li>
+            <li><a href="pages/mailbox_read_mail.html"><i class="mdi mdi-toggle-switch-off"></i>Read</a></li>
+          </ul>
+        </li>
+		  
+        <li class="treeview">
+          <a href="#">
+            <i class="mdi mdi-contacts"></i>
+            <span>Contact</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/contact_app_chat.html"><i class="mdi mdi-toggle-switch-off"></i>Chat app</a></li>
+            <li><a href="pages/contact_app.html"><i class="mdi mdi-toggle-switch-off"></i>Contact / Employee</a></li>
+            <li><a href="pages/contact_userlist_grid.html"><i class="mdi mdi-toggle-switch-off"></i>Userlist Grid</a></li>
+			<li><a href="pages/contact_userlist.html"><i class="mdi mdi-toggle-switch-off"></i>Userlist</a></li>
+          </ul>
+        </li>
+		  
+        
+		<li class="treeview">
+          <a href="#">
+            <i class="mdi mdi-waves"></i>
+            <span>Widgets</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/widgets_blog.html"><i class="mdi mdi-toggle-switch-off"></i>Blog</a></li>
+            <li><a href="pages/widgets_chart.html"><i class="mdi mdi-toggle-switch-off"></i>Chart</a></li>
+            <li><a href="pages/widgets_list.html"><i class="mdi mdi-toggle-switch-off"></i>List</a></li>
+            <li><a href="pages/widgets_social.html"><i class="mdi mdi-toggle-switch-off"></i>Social</a></li>
+            <li><a href="pages/widgets_statistic.html"><i class="mdi mdi-toggle-switch-off"></i>Statistic</a></li>
+            <li><a href="pages/widgets_weather.html"><i class="mdi mdi-toggle-switch-off"></i>Weather</a></li>
+            <li><a href="pages/widgets.html"><i class="mdi mdi-toggle-switch-off"></i>Widgets</a></li>
+          </ul>
+        </li>
+		  
+		
+    {% if user.is_authenticated %}
+     
+    <li><a href="{% url 'logout' %}"><i class="mdi mdi-directions"></i><span>Log Out</span></a></li> 
+    {% else %}
+    <li><a href="{% url 'login' %}"><i class="mdi mdi-directions"></i><span>Log In</span></a></li> 
+    {% endif %}
+        
+      </ul>
+
+    
+    </section>
+  </aside>
