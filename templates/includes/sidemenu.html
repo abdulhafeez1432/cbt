@@ -1,0 +1,56 @@
+{% load staticfiles %}
+
+<div class="body-content clearfix" >
+
+        <div class="bg-color1">
+          <div class="container">
+            <div class="col-md-3 col-sm-3">
+
+              <div class="block-section text-center ">
+                <img src="{% static '/assets/theme/images/people/4.jpg' %}" class="img-rounded" alt="">
+                <div class="white-space-20"></div>
+                <h4> {{ user.first_name }}, {{ user.last_name}} </h4>
+                <div class="white-space-20"></div>
+                <ul class="list-unstyled">
+                  <li><a href="{% url 'JobAlert' %}"> My Alerts </a></li>
+
+                   {% if countcv > 0 %}
+                      <li><a href="{% url 'PersonalCvEdit' user.id %}"> Edit My CV</a></li>
+                    {% else %}
+                      <li><a href="{% url 'PersonalCvUpload' %}"> My CV</a></li>
+                    {% endif %}
+
+
+                   {% if countdetails > 0 %}
+                      <li><a href="{% url 'PersonalDetailsEdit' user.id %}"> Edit Personal Details</a></li>
+                    {% else %}
+                      <li><a href="{% url 'PersonalDetailsUpload' %}"> Personal Details</a></li>
+                    {% endif %}
+
+
+                    {% if countimage > 0 %}
+                    <li><a href="{% url 'PersonalImageEdit' user.id %}"> Edit Upload Passport</a></li>
+                    {% else %}
+                      <li><a href="{% url 'PersonalImageUpload' %}"> Upload Passport</a></li>
+                    {% endif %}
+                  
+                  {% if countsocial > 0 %}
+                  <li><a href="{% url 'SocialMedialEdit' user.id %}"> Edit Social Mdeia</a></li>
+                  {% else %}
+                  <li><a href="{% url 'SocialMediaUpload' %}"> Social Mdeia</a></li>
+                  {% endif %}
+                  <li><a href="#"> Change Password</a></li>
+
+                  
+
+                </ul>
+                <div class="white-space-20"></div>
+                <a href="#" class="btn  btn-line soft btn-theme btn-pill btn-block">Post a Job</a>
+                <a href="#" class="btn  btn-line soft  btn-theme btn-pill btn-block">Build Resume</a>
+              </div>    
+            </div>
+
+      {% block content  %}
+    
+      {% endblock %}
+

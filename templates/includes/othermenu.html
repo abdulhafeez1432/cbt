@@ -1,0 +1,94 @@
+<div class="col-md-3">
+                <div class="block-section-sm side-right">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <p><strong>Job Analysis by: </strong></p>
+                    </div>
+                   
+                  </div>
+
+                  <div class="result-filter">
+
+                    <h5 class="no-margin-top font-bold margin-b-20 " ><a href="#s_collapse_1" data-toggle="collapse" > Average Miniuim Salary Estimate <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i> </a></h5>
+                    <div class="collapse in" id="s_collapse_1">
+                      <div class="list-area">
+                        <ul class="list-unstyled">
+                          {% for salarymins in salarymin %}
+                          <li>
+                            <a  href="#" >{{ salarymins.heading }} </a> N{{ salarymins.average_rating}}
+                          </li>
+                          {% endfor %}
+                         
+                        </ul>
+                      </div>
+                    </div>
+
+                     
+
+                    <h5 class="no-margin-top font-bold margin-b-20 " ><a href="#s_collapse_1" data-toggle="collapse" >Salary Estimate <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i> </a></h5>
+                    <div class="collapse in" id="s_collapse_1">
+                      <div class="list-area">
+                        <ul class="list-unstyled">
+                          {% for salarymaxs in salarymax %}
+                          <li>
+                            <a  href="#" >{{ salarymaxs.heading }} - </a> N{{ salarymaxs.average_rating}}
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <h5 class="font-bold  margin-b-20" ><a href="#s_collapse_5" data-toggle="collapse" >Job Category <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i></a> </h5>
+                    <div class="collapse in" id='s_collapse_5'>
+                      <div class="list-area">
+                        <ul class="list-unstyled ">
+                          {% for categorys in category %} 
+                          <li>
+                            <a  href="#" >{{ categorys.category }} </a> ({{ categorys.num_cat }})
+
+                                                
+
+
+                          {% endfor %}                         
+                        </ul>
+                                 
+                      </div>
+                    </div>
+
+
+                    <h5 class="font-bold  margin-b-20"><a href="#s_collapse_2" data-toggle="collapse" >Job Type <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i></a>  </h5>
+                    <div class="collapse in" id="s_collapse_2">
+                      <div class="list-area">
+                        <ul class="list-unstyled ">
+                          {% for jobtypes in jobtype %}
+                          <li>
+                            <a  href="#" >{{ jobtypes.jobtype }}</a> ({{jobtypes.num_type}})
+                          </li>
+                         {% endfor %}
+                         
+                        </ul>
+
+                      </div>
+                    </div>
+
+
+                    <h5 class="font-bold  margin-b-20"><a href="#s_collapse_3" data-toggle="collapse" >Job Location <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i></a> </h5>
+                    <div class="collapse in" id="s_collapse_3">
+                      <div class="list-area">
+                        <ul class="list-unstyled ">
+                          {% for locations in location %}
+                          <li>
+                            <a  href="#" >{{ locations.location }}</a> ({{locations.num_location}})
+                          </li>
+                         {% endfor %}
+                        </ul>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+              </div>
