@@ -24,8 +24,9 @@ class StudentSignUpView(CreateView):
 
     def form_valid(self, form):
         user = form.save()
-        login(self.request, user)
-        return redirect('students:quiz_list')
+        #login(self.request, user)
+        messages.success(self.request, 'Student HAs Been Succfull Resigerter!')
+        return redirect('student_signup')
 
 @method_decorator([login_required, student_required], name='dispatch')
 class WelcomeListView(ListView):
@@ -41,7 +42,11 @@ class WelcomeListView(ListView):
         return queryset
 
 
-
+def text(request):
+    context = {
+        'days': [1, 2, 3],
+    }
+    return render(request, 'classroom/students/days.html', context)
         
 
 
